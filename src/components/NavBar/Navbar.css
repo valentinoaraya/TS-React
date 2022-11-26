@@ -1,0 +1,19 @@
+.imgLogo{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.fondoNav{
+    background-color: black;
+}
+
+.sections{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.sections:hover{
+    color: #f4cb00;
+}
