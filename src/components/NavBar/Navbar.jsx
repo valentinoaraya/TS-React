@@ -1,20 +1,21 @@
 import "./Navbar.css"
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 
 const Navbar = ()=>{
     return <nav className="navbar navbar-expand-lg fondoNav">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img className="imgLogo" src="https://res.cloudinary.com/dyzoubfmd/image/upload/v1669420510/imagenes%20ThikiaSport/logoThikia_efmpsr.png" alt="Logo Thikia" /></a>
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to="/"><img className="imgLogo" src="https://res.cloudinary.com/dyzoubfmd/image/upload/v1669420510/imagenes%20ThikiaSport/logoThikia_efmpsr.png" alt="Logo Thikia" /></Link>
                         <ul className="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" className="sections" href="#">Proteínas</a>
+                            <li className="nav-item">
+                                <Link className="sections" to={"/category/Proteina"}>Proteínas</Link>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" className="sections" href="#">Aminoácidos</a>
+                            <li className="nav-item">
+                                <Link className="sections" to="/category/Aimnoacido">Aminoácidos</Link>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" className="sections" href="#">Shakers</a>
+                            <li className="nav-item">
+                                <Link className="sections" to="/category/Shaker">Shakers</Link>
                             </li>
                         </ul>
                     <CartWidget/>

@@ -1,0 +1,29 @@
+.presentacion{
+    width: 98.9vw;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Bebas Neue", cursive;
+    background-image: url(https://res.cloudinary.com/dyzoubfmd/image/upload/v1669424616/imagenes%20ThikiaSport/fondo8_buqion.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nombre{
+    text-align: center;
+}
+
+.title, .subtitle{
+    color: white;
+}
+
+.title{
+    font-size: 4rem;
+}
+
+.resalt{
+    color: #f4cb00;
+}

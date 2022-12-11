@@ -1,12 +1,18 @@
 import "./ItemListContainer.css"
+import ItemList from "../ItemList/ItemList"
+import TitleSection from '../TitleSection/TItleSection';
+import Bienvenida from "../Bienvenida/Bienvenida";
 
-const ItemListContainer = ({text, subtext, resalt})=>{
-    return <div className="presentacion">
-               <div className="nombre">
-                    <h1 className="title">{text} <span className="resalt">{resalt}</span></h1>
-                    <h2 className="subtitle">{subtext}</h2>
-               </div>
-           </div>
+const ItemListContainer = ()=>{
+
+    return (
+        <div>
+            <Bienvenida text={"Bienvenido a"} resalt={"Thikia Sport"} subtext={"Los mejores suplementos deportivos"}/>
+            <TitleSection titleSection={"Productos"} />
+            <ItemList/>
+        </div>
+    )
+    
 }
 
 export default ItemListContainer
