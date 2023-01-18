@@ -8,7 +8,7 @@ function BuyFinish() {
     <div className='buyFinish'>
         <h1 className='titleFinCompra'>Compra realizada con éxito!</h1>
         <h2 className='ticket'>Muchas gracias! Puede pasar a retirar sus productos por el local.</h2>
-        <p className='ticket'>El ticket de compra es: {orderID}</p>
+        <p className='ticket'>Tu ticket de compra es: {orderID}</p>
     </div>
   )
 }
