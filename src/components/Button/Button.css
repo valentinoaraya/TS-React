@@ -1,0 +1,26 @@
+.button{
+    color: black;
+    background-color: #f4cb00;
+    border: none;
+    margin: 1rem 0.3rem 0rem 0.3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all 0.2s;
+}
+
+.button:hover{
+    color: black;
+    background-color: white;
+}
+
+.parrafButton{
+    margin: 0;
+    padding: 0;
+    font-weight: bolder;
+}
+
+@media (max-width: 340px) {
+    .button{
+        padding: 0.7rem;
+    }
+}

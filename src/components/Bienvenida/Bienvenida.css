@@ -1,5 +1,5 @@
 .presentacion{
-    width: 98.9vw;
+    width: 97.9vw;
     height: 75vh;
     display: flex;
     justify-content: center;
@@ -26,4 +26,14 @@
 
 .resalt{
     color: #f4cb00;
+}
+
+@media (max-width: 500px) {
+    .title{
+        font-size: 3rem;
+    }
+
+    .presentacion{
+        width: 100vw;
+    }
 }

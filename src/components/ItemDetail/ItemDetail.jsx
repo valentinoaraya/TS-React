@@ -1,13 +1,47 @@
 import "./ItemDetail.css"
+import ItemCount from "../ItemCount/ItemCount"
+import { useContext, useState } from "react"
+import { Link } from "react-router-dom"
+import {cartContext} from "../../storage/cartContext"
+import Button from "../Button/Button"
 
-const ItemDetail = ({arrayProduct})=>{
+const ItemDetail = ({product})=>{
+    const [countInCart, setCountInCart] = useState(0)
+    const {addToCart} = useContext(cartContext)
 
-    return <div className="itemDetail">
-                <h2 className="subtitle">{arrayProduct.nombre}</h2>
-                <img className="img" src={arrayProduct.imagen} alt="" />
-                <p className="parraf">$ {arrayProduct.precio}</p>
-                <p className="p">{arrayProduct.descripcion}</p>
+    const handleAddToCart=(count)=>{
+        setCountInCart(count)
+        addToCart(product,count)
+    }
+
+    return (
+        <div className="itemDetail">
+            <h2 className="sub">{product.nombre}</h2>
+            <div className="divflex-row">
+                <div className="flex">
+                    <img className="img" src={product.imagen} alt="" />
+                    <p className="price">$ {product.precio}</p>
+                </div>
+                <div className="flex">
+                    <p className="p">{product.descripcion}</p>
+                </div>
             </div>
+            {
+                countInCart?
+                <div>
+                    <Link to={"/cart"}>
+                        <Button>Ir al carrito</Button>
+                    </Link>
+                    <Link to={"/"}>
+                        <Button>Seguir comprando</Button>
+                    </Link>
+                </div>
+                
+                :
+                <ItemCount stock={product.stock} onPressButton={handleAddToCart}/>
+            }
+        </div>
+    )
 }
-
+ 
 export default ItemDetail

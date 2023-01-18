@@ -1,0 +1,20 @@
+label{
+    color: #f4cb00;
+    font-size: 2.5rem;
+    font-family: "Bebas Neue", cursive;
+}
+
+.inputdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    margin: 1.5rem;
+    width: 75%;
+}
+
+@media (max-width: 600px) {
+    label{
+        font-size: 1.7rem;
+    }
+}

@@ -1,8 +1,66 @@
-.card{
+.link{
     margin: 1.3rem;
+    text-decoration: none;
+}
+
+.card{
+    width: 14rem;
+}
+
+.link:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.initialPrice{
+    margin: 0;
+    color: grey;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+.pricesDiscounts{
+    display: flex;
+}
+
+.parrafDiscounts{
+    font-style: italic;
+    font-size: 1.3rem;
+    color: green;
+}
+
+.divDiscount{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: black;
+}
+
+.priceDiscount{
+    color: black;
+}
+
+.priceFlavorItem{
+    font-weight: bold;
+    text-align: start;
 }
 
 .card-title{
+    font-size: 1rem;
     color: black;
-    text-decoration: none;
+}
+
+@media (max-width: 500px) {
+    .card{
+        width: 9.5rem;
+    }
+    .parrafDiscounts{
+        font-size: 1rem;
+    }
+
+    .initialPrice{
+        font-size: 0.8rem;
+    }
 }

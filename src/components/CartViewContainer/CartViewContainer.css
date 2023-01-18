@@ -1,0 +1,68 @@
+.cartView{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.carritoVacio{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+table, th, td{
+    border-bottom: 1px solid #f4c00b;
+    border-collapse: collapse;
+    padding: 1rem;
+}
+
+th{
+    background-color: #f4c00b;
+}
+
+td{
+    text-align: center;
+}
+
+table{
+    width: 75%;
+    background-color: white;
+}
+
+h1{
+    color: #f4c00b;
+}
+
+.titleCarrito{
+    margin-bottom: 2rem;
+}
+
+.titleTotal{
+    margin-top: 3rem;
+}
+
+.divTotalFinish{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 820px) {
+    table{
+        width: 100%;
+    }
+}
+
+@media (max-width: 625px){
+    .cartView{
+        padding: 2rem 0 2rem 0;
+    }
+}
+
+@media (max-width: 560px) {
+    table{
+        font-size: 0.6rem;
+
+    }
+}

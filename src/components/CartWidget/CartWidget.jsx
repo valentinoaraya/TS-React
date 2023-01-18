@@ -1,12 +1,22 @@
 import "./CartWidget.css"
+import { useContext } from "react"
+import { cartContext } from "../../storage/cartContext"
+import { Link } from "react-router-dom"
 
 const CartWidget = ()=>{    
-    return <div className="flexRow">
+    const context = useContext(cartContext)
+    const cantidad = context.cantidad()
+
+    return (
+        <Link className="linkCart" to={"/cart"}>
+            <div className="flexRow">
                 <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="#f4cb00" className="bi bi-cart-fill" viewBox="0 0 16 16">
                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                 </svg>
-                <p className="parraf">0</p>
+                {cantidad > 0 && <p className="parraf">{cantidad}</p>}
             </div>
+        </Link>
+    )        
 }
 
 export default CartWidget

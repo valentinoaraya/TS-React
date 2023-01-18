@@ -1,0 +1,12 @@
+.loading{
+    height: 79vh;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleLoading{
+    margin-top: 1rem;
+    color: #f4cb00;
+}

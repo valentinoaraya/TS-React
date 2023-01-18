@@ -12,10 +12,10 @@ const Navbar = ()=>{
                                 <Link className="sections" to={"/category/Proteina"}>Proteínas</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="sections" to="/category/Aimnoacido">Aminoácidos</Link>
+                                <Link className="sections" to={"/category/Aimnoacido"}>Aminoácidos</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="sections" to="/category/Shaker">Shakers</Link>
+                                <Link className="sections" to={"/category/Shaker"}>Shakers</Link>
                             </li>
                         </ul>
                     <CartWidget/>

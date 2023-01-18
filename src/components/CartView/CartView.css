@@ -1,0 +1,15 @@
+.imgCart{
+    height: 4rem;
+    width: 4rem;
+}
+
+.tdImg{
+    text-align: center;
+}
+
+@media (max-width: 445px){
+    .imgCart{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}

@@ -1,12 +1,82 @@
 .itemDetail{
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    background-color: #1B1B1E;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 0rem 5rem 0rem 5rem;
+}
+
+.sub{
+    font-family: "Bebas Neue", cursive;
+    font-size: 3rem;
+    color: #f4cb00;
 }
 
 .img{
     height: 20rem;
     width: 20rem;
+    margin-left: 2.5rem;
+    border-radius: 0.5rem;
 }
 
 .p{
     color: white;
+    text-align: left;
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    margin-right: 2.5rem;
+}
+
+.price{
+    font-weight: bolder;
+    color: white;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.flex{
+    align-items: center;
+}
+
+.divflex-row{
+    display: flex;
+}
+
+@media (max-width: 1020px){
+    .divflex-row{
+        flex-direction: column;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .img{
+        height: 11rem;
+        width: 11rem;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 800px){
+    .itemDetail{
+        margin: 0rem 2rem 0rem 2rem;
+    }
+
+    .p{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .img{
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .itemDetail{
+        margin: 0rem 0.2rem 0rem 0.2rem;
+    }
 }
