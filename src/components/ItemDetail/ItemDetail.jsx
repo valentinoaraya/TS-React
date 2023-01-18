@@ -18,11 +18,11 @@ const ItemDetail = ({product})=>{
         <div className="itemDetail">
             <h2 className="sub">{product.nombre}</h2>
             <div className="divflex-row">
-                <div className="flex">
+                <div className="flexDetail">
                     <img className="img" src={product.imagen} alt="" />
                     <p className="price">$ {product.precio}</p>
                 </div>
-                <div className="flex">
+                <div className="flexDetail">
                     <p className="p">{product.descripcion}</p>
                 </div>
             </div>

@@ -36,7 +36,10 @@
     margin: 1rem;
 }
 
-.flex{
+.flexDetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -48,7 +51,7 @@
     .divflex-row{
         flex-direction: column;
     }
-    .flex{
+    .flexDetail{
         flex-direction: column;
     }
     .img{
