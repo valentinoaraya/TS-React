@@ -33,15 +33,12 @@
 @media (max-width: 800px) {
     .presentacion{
         background-image: url(https://res.cloudinary.com/dyzoubfmd/image/upload/v1670331333/imagenes%20ThikiaSport/imagenFondo_solkgt.jpg);
+        width: 100vw;
     }
 }
 
 @media (max-width: 500px) {
     .title{
         font-size: 3rem;
-    }
-
-    .presentacion{
-        width: 100vw;
     }
 }
