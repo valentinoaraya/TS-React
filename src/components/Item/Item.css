@@ -52,7 +52,7 @@
     color: black;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 531px) {
     .card{
         width: 9.5rem;
     }

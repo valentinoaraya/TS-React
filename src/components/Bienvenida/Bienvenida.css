@@ -18,6 +18,8 @@
 
 .title, .subtitle{
     color: white;
+    margin: 0 1rem 0 1rem;
+
 }
 
 .title{
@@ -26,6 +28,12 @@
 
 .resalt{
     color: #f4cb00;
+}
+
+@media (max-width: 800px) {
+    .presentacion{
+        background-image: url(https://res.cloudinary.com/dyzoubfmd/image/upload/v1670331333/imagenes%20ThikiaSport/imagenFondo_solkgt.jpg);
+    }
 }
 
 @media (max-width: 500px) {

@@ -10,7 +10,7 @@ const ItemDetailContainer = ()=>{
     const [isLoading, setIsLoading] = useState(true)
 
     const {id} = useParams()
-    
+        
     useEffect(()=>{
         getSingleItem(id)
          .then((res)=> {
