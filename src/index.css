@@ -7,6 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body::-webkit-scrollbar{
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: #f4cb00;
+  border-radius: 10px;
+  border-right: 2px solid black;
+}
+
 html{
   background-color: black;
 }
