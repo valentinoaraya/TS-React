@@ -11,7 +11,7 @@ Thikia Sport es un gimnasio que además de ofrecer sus servicios como tal, cuent
 
 ![](https://res.cloudinary.com/dyzoubfmd/image/upload/v1674935297/imgReadme/HTML5_logo_and_wordmark.svg_nvwfit.png)     ***HTML5***
 
-![](https://res.cloudinary.com/dyzoubfmd/image/upload/v1674935304/imgReadme/CSS3_logo_and_wordmark.svg_yq9rtg.png) * ** CSS3***
+![](https://res.cloudinary.com/dyzoubfmd/image/upload/v1674935304/imgReadme/CSS3_logo_and_wordmark.svg_yq9rtg.png) ***CSS3***
 
 ![](https://res.cloudinary.com/dyzoubfmd/image/upload/v1674935298/imgReadme/JavaScript-logo_pdesac.png)  ***JavaScript***
 
