@@ -22,7 +22,7 @@ const ItemDetailContainer = ()=>{
 
     return (
         <div className="itemDetailContainer">
-            {isLoading ? <Loading title={"Cargando producto..."}/> : <ItemDetail product={product}/>}
+            {isLoading ? <Loading title={"Cargando producto..."} height={true}/> : <ItemDetail product={product}/>}
         </div>
     )   
 }

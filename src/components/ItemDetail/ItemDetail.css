@@ -3,9 +3,10 @@
     flex-direction: column;
     text-align: center;
     background-color: #1B1B1E;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 1rem;
-    margin: 0rem 2rem 0rem 2rem;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .sub{
@@ -47,6 +48,10 @@
     display: flex;
 }
 
+.disableDescriptionProduct{
+    display: none;
+}
+
 @media (max-width: 1020px){
     .divflex-row{
         flex-direction: column;
@@ -59,6 +64,12 @@
         width: 11rem;
         margin-right: 0;
         margin-left: 0;
+    }
+    .descriptionProduct{
+        display: none;
+    }
+    .disableDescriptionProduct{
+        display: block;
     }
 }
 

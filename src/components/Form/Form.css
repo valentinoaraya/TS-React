@@ -1,12 +1,14 @@
 .divForm{
-    padding: 0 5rem 5rem 5rem;
+    padding: 0 1rem 1rem 1rem;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .form{
     display: flex;
     flex-direction: column;
     background-color: #1B1B1E;
-    padding: 3rem;
+    padding: 1rem;
     border-radius: 1rem;
     align-items: center;
 }

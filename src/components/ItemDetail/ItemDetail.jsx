@@ -7,6 +7,7 @@ import Button from "../Button/Button"
 
 const ItemDetail = ({product})=>{
     const [countInCart, setCountInCart] = useState(0)
+    const [descripcionProduct,  setDescripcionProduct] = useState(false)
     const {addToCart} = useContext(cartContext)
 
     const handleAddToCart=(count)=>{
@@ -14,6 +15,10 @@ const ItemDetail = ({product})=>{
         addToCart(product,count)
     }
 
+    const handleDescription = ()=> {
+        setDescripcionProduct(!descripcionProduct)
+    }
+    
     return (
         <div className="itemDetail">
             <h2 className="sub">{product.nombre}</h2>
@@ -22,7 +27,17 @@ const ItemDetail = ({product})=>{
                     <img className="img" src={product.imagen} alt="" />
                     <p className="price">$ {product.precio}</p>
                 </div>
-                <div className="flexDetail">
+                <div className="flexDetail disableDescriptionProduct">
+                    { descripcionProduct ?
+                    <div className="flexDetail">
+                    <p className="p">{product.descripcion}</p>
+                    <Button onFinish={handleDescription}>Cerrar descripción...</Button>
+                    </div>
+                    :
+                    <Button onFinish={handleDescription}>Ver descripción...</Button>
+                    }
+                </div>
+                <div className="flexDetail descriptionProduct">
                     <p className="p">{product.descripcion}</p>
                 </div>
             </div>

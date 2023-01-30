@@ -34,7 +34,7 @@ const ItemList = ()=>{
     return (
         <>
             {
-                isLoading ? <Loading title={"Cargando productos..."}/>
+                isLoading ? <Loading title={"Cargando productos..."} height={true}/>
                 :
                 <Flex>
                     {

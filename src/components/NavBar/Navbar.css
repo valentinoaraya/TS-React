@@ -3,6 +3,15 @@
     height: 3.5rem;
 }
 
+.navbar-brand{
+    margin: 0;
+}
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+}
+
 .fondoNav{
     background-color: black;
 }

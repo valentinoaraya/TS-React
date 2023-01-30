@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { createBuyOrder } from '../../services/firebase'
 import { cartContext } from '../../storage/cartContext'
 import Button from '../Button/Button'
+import Loading from '../Loading/Loading'
 import "./Form.css"
 import InputForm from './InputForm'
 import Swal from 'sweetalert2'
@@ -14,10 +15,13 @@ function Form() {
      phone: ""
     })
 
+    const [loadingOrder, setLoadingOrder] = useState(false)
+
     const {cart, totalPrice, vaciarCarrito} = useContext(cartContext)
     const navigateTo = useNavigate()
 
     const handleCheckout= ()=>{
+        
         const order = {
           buyer: buyerData, 
           date: new Date(),
@@ -52,6 +56,7 @@ function Form() {
     evt.preventDefault()
     let verificar = verificarDatos()
     if (verificar){
+        setLoadingOrder(true)
         handleCheckout()
         setBuyerData({
             nameSurname: "",
@@ -89,8 +94,14 @@ function Form() {
                 name="phone"
                 onChange={handleInputChange}
             />
+            
             <div className='divButton'>
-                <Button onFinish={onSubmit}>Crear orden</Button>
+                { loadingOrder ?
+                    <Loading title={"Creando order"} height={false}/>
+                :
+                    <Button onFinish={onSubmit}>Crear orden</Button>
+                }
+                
             </div>
         </form>
     </div>

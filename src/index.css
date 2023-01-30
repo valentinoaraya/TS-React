@@ -8,7 +8,7 @@ body {
 }
 
 body::-webkit-scrollbar{
-  width: 6px;
+  width: 0.4rem;
 }
 
 body::-webkit-scrollbar-thumb{
