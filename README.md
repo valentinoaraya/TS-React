@@ -1,8 +1,9 @@
-![Logo Thikia Sport](https://res.cloudinary.com/dyzoubfmd/image/upload/v1674934096/imagenes%20ThikiaSport/Banner_asesora_de_imagen_de_moda_elegante_beige_2_h36jyl.png "Logo Thikia Sport")
+![Logo Thikia Sport](https://res.cloudinary.com/dyzoubfmd/image/upload/v1675086826/imgReadme/Banner_asesora_de_imagen_de_moda_elegante_beige__2_-removebg-preview_jpqvnf.png "Logo Thikia Sport")
+
 # Thikia sport 🏋️‍♀️
 
 ### Introducción
-Thikia Sport es un gimnasio que además de ofrecer sus servicios como tal, cuenta con un sector encargado de la venta de suplementos deportivos. Aproveché de que no tenían un eCommerce para esta actividad, entonces lo diseñé lo diseñé con React para el curso de React JS de Coderhouse.
+Thikia Sport es un gimnasio que además de ofrecer sus servicios como tal, cuenta con un sector encargado de la venta de suplementos deportivos. Aproveché de que no tenían un eCommerce para esta actividad, entonces lo diseñé con React para el curso de React JS de Coderhouse.
 
 
 ### Herramientas
