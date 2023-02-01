@@ -8,16 +8,32 @@ import Button from "../Button/Button"
 const ItemDetail = ({product})=>{
     const [countInCart, setCountInCart] = useState(0)
     const [descripcionProduct,  setDescripcionProduct] = useState(false)
-    const {addToCart} = useContext(cartContext)
+    const {addToCart, cart} = useContext(cartContext)
 
     const handleAddToCart=(count)=>{
         setCountInCart(count)
         addToCart(product,count)
     }
 
+    const verificarAgregado = ()=>{
+        let isInCart = cart.findIndex(item => item.id === product.id)
+        if (isInCart === -1){
+            return false
+        }else{
+            return true
+        }
+    }
+    const isInCart = verificarAgregado()
+    
     const handleDescription = ()=> {
         setDescripcionProduct(!descripcionProduct)
     }
+
+    const saveInLocalStorage = ()=> {
+        localStorage.setItem("Cart", JSON.stringify(cart))
+    }
+
+    saveInLocalStorage()
     
     return (
         <div className="itemDetail">
@@ -53,7 +69,8 @@ const ItemDetail = ({product})=>{
                 </div>
                 
                 :
-                <ItemCount stock={product.stock} onPressButton={handleAddToCart}/>
+
+                <ItemCount stock={product.stock} isInCart={isInCart} onPressButton={handleAddToCart}/>
             }
         </div>
     )

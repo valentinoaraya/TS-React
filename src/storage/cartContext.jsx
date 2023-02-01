@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { createContext, useState } from 'react';
 
 const cartContext = createContext([])
@@ -7,6 +8,16 @@ const CartContextProvider = ({children})=>{
     
     const [cart, setCart] = useState([])
     const newCart = [...cart]
+
+    const isLocalStorage = ()=> {
+        let cartInStorage = JSON.parse(localStorage.getItem("Cart"))
+
+        if (!cartInStorage){
+            console.log("carrito vacío")
+        }else{
+            setCart(cartInStorage)
+        }
+    }
 
     const addToCart = (item,count)=>{
         let isItem = cart.findIndex(i => i.id === item.id)
@@ -20,16 +31,27 @@ const CartContextProvider = ({children})=>{
         }
     }
 
+    const setearCantidad = (id, count)=> {
+        let isItem = cart.findIndex(i => i.id === id)
+        newCart[isItem].count = count
+        setCart(newCart)
+        localStorage.setItem("Cart", JSON.stringify(cart))
+    }
+
     const totalItems = ()=>{
         let total = cart.reduce((acc, i) => acc + i.count, 0)
         return total
     }
 
-    const vaciarCarrito = ()=> setCart([])
+    const vaciarCarrito = ()=> {
+        setCart([])
+        localStorage.removeItem("Cart")
+    }
 
     const removeItem = (id)=>{
         let itemsEliminados = cart.filter(elem => elem.id !== id)
         setCart(itemsEliminados)
+        localStorage.setItem("Cart", JSON.stringify(itemsEliminados))
     } 
 
     const totalPrice = ()=>{
@@ -39,7 +61,12 @@ const CartContextProvider = ({children})=>{
 
         return total
     }
+
+    useEffect(()=>{
+        isLocalStorage()
+    },[])
     
+
     return(
         <Provider value={ {
             cart, 
@@ -47,7 +74,8 @@ const CartContextProvider = ({children})=>{
             addToCart,
             vaciarCarrito,
             removeItem,
-            totalPrice
+            totalPrice,
+            setearCantidad
         }}>
             {children}
         </Provider>

@@ -37,13 +37,15 @@ function CartViewContainer() {
         </thead>
         <tbody>
           {
-            cart.map(({id, nombre, imagen, precio, count})=>{
+            cart.map(({id, nombre, imagen, precio, count, stock})=>{
               return <CartView
-                        key={id} 
+                        key={id}
+                        id={id} 
                         nombre={nombre} 
                         imagen={imagen}
                         precio={precio}
                         cantidad={count}
+                        stock={stock}
                         fn={()=> removeItem(id)}
                     />
             })
