@@ -9,8 +9,11 @@
 }
 
 .carritoVacio{
-    margin-top: 12rem;
-    margin-bottom: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
 }
 
 table, th, td{
