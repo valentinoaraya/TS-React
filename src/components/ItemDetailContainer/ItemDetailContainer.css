@@ -1,4 +1,7 @@
 .itemDetailContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
     text-align: center;
     min-height: 90vh;

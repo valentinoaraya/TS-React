@@ -23,7 +23,7 @@ function Footer() {
         </div>
         <p className='copy'>© Copyright by Valentino Araya</p>
         <p className='copy'>Powered by React JS</p>
-        <p className='copy'>Thikia Sport 2.1.5</p>
+        <p className='copy'>Thikia Sport 2.1.6</p>
     </footer>
   )
 }
