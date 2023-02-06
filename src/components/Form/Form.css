@@ -8,10 +8,11 @@
 .form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #1B1B1E;
     padding: 1rem;
     border-radius: 1rem;
-    align-items: center;
 }
 
 .titleForm{
