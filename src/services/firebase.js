@@ -4,12 +4,12 @@ import arrayProducts from "../ddbb/dataBase"
 import Swal from 'sweetalert2'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCB8_ns9KewOhWxI3B2MGdDQ2bq6XWzX0Q",
-  authDomain: "thikia-a4879.firebaseapp.com",
-  projectId: "thikia-a4879",
-  storageBucket: "thikia-a4879.appspot.com",
-  messagingSenderId: "355437338770",
-  appId: "1:355437338770:web:6c690339bfe1c655f1c64b"
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APPID
 };
 
 const app = initializeApp(firebaseConfig);
